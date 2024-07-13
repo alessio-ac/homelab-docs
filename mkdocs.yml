@@ -1,0 +1,83 @@
+site_name: Documentazione Homelab
+site_url: https://homelab.ale.ac
+
+theme:
+  name: material
+  language: it
+  palette: 
+    - media: "(prefers-color-scheme)"
+      toggle: 
+        icon: material/brightness-auto
+        name: Switch to light mode
+ 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: indigo
+      accent: blue
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to automatic mode
+      primary: orange
+      accent: orange
+
+  features:
+    - navigation.instant
+    - navigation.indexes 
+    - navigation.expand
+    - navigation.sections
+    - content.code.annotation
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/light-extra.css
+  
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+plugins:
+  - glightbox
+  - social
+  
+
+nav:
+    - Home: index.md
+    - Installazione e configurazione:
+      - TrueNAS Scale:
+          - Introduzione: truenas/nas-intro.md
+          - Installazione: truenas/nas-install.md
+          - Configurazione: truenas/nas-conf.md
+      - Proxmox:
+          - Introduzione: proxmox/prox-intro.md
+          - Installazione: proxmox/prox-install.md
+          - Macchine Virtuali: proxmox/vm.md
+    - Servizi: 
+      - Nextcloud: services/nextcloud.md
+      - BookStack: services/bookstack.md
+      - Jellyfin: services/jellyfin.md
+      - Homebox: services/homebox.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/in/alessio-cucinotta-cms
+
+copyright: |
+  &copy; 2024 <a href="mailto:alessio.cucinotta@ale.ac"  target="_blank" rel="noopener">Alessio Cucinotta</a>
