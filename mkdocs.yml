@@ -6,16 +6,14 @@ theme:
   language: it
   palette: 
 
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
       primary: indigo
       accent: blue
 
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
