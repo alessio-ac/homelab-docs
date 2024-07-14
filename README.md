@@ -1,3 +1,3 @@
 # Config files for personal homelab documentation
 
-The website can be found at homelab.ale.ac
+The website can be found at https://homelab.ale.ac
