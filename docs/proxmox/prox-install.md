@@ -7,7 +7,7 @@
 
 Scaricare l'immagine del sistema operativo dal sito ufficiale. È consigliato verificare la validità dell'immagine scaricata tramite i file forniti dal sito con PGP o SHA256.
 
-Una volta verificata l'immagine va inserita all'interno di una memoria flash per poterla fornire al sistema di riferimento. È possibile farlo trmaite `dd` su Linux:
+Una volta verificata l'immagine va inserita all'interno di una memoria flash per poterla fornire al sistema di riferimento. È possibile farlo tramite `dd` su Linux:
 
 ```
 dd bs=4M if=[PERCORSO ISO] of=/dev/[PERCORSO MEMORIA FLASH] conv=fsync oflag=direct status=progress
@@ -15,7 +15,7 @@ dd bs=4M if=[PERCORSO ISO] of=/dev/[PERCORSO MEMORIA FLASH] conv=fsync oflag=dir
 
 ## Installazione
 
-Inserire la memoria flash nel PC di riferimento e far paritre il boot da essa tramite il boot menu (solitamente acessibile premendo F11 all'avvio del PC). Per l'installazione di TrueNAS è necessario disattivare il *secure boot*.
+Inserire la memoria flash nel PC di riferimento e far partire il boot da essa tramite il boot menu (solitamente accessibile premendo F11 all'avvio del PC).
 
 Al boot apparirà una schermata di selezione, basta aspettare 5 secondi e la prima opzione verrà scelta automaticamente.
 
@@ -32,7 +32,7 @@ Creare una password ed inserire una mail.
 
 ![](/assets/prox-creds.png)
 
-Selezionare la corretta interfaccia di rete, ed inserire un hostname. L'hostname con indirzzo di proprietà è importante solo se si ha intezione di creare cluster o di esporre proxmox all'internet, nel caso di utilizzo per homelab è possibile inserire un hostname a piacere. Per quanto riguarda l'indirizzo IP, il Gateway ed il server DNS, le opzioni di default vanno bene.
+Selezionare la corretta interfaccia di rete, ed inserire un hostname. L'hostname con indirizzo di proprietà è importante solo se si ha intenzione di creare cluster o di esporre proxmox all'internet, nel caso di utilizzo per homelab è possibile inserire un hostname a piacere. Per quanto riguarda l'indirizzo IP, il Gateway ed il server DNS, le opzioni di default vanno bene.
 
 ![](/assets/prox-network.png)
 
@@ -40,6 +40,6 @@ Confermare le impostazioni scelte e aspettare che Proxmox si installi.
 
 ![](/assets/prox-summary.png)
 
-Dopo l'installazione il sistema si riavvierà sul TTY, il quale mostrerà l'indirizzo del server, navigando a qeull'indirizzo su un qualunque browser sarà possibile inserire le credenziali create prima ed accedere alla Web UI di Proxmox. A questo punto il sistema è pronto alla creazione di VM e LXC.
+Dopo l'installazione il sistema si riavvierà sul TTY, il quale mostrerà l'indirizzo del server, navigando a quell'indirizzo su un qualunque browser sarà possibile inserire le credenziali create prima ed accedere alla Web UI di Proxmox. A questo punto il sistema è pronto alla creazione di VM e LXC.
 
 ![](/assets/prox-ui.png)

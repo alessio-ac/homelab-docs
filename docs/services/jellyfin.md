@@ -1,6 +1,6 @@
 # Jellyfin
 
-Jellyfin è un servizio di media streaming personale. È intermante open-source e gratuito, a differenza di Plex.
+Jellyfin è un servizio di media streaming personale. È interamente open-source e gratuito, a differenza di Plex.
 
 - [Sito ufficiale](https://jellyfin.org/)
 - [Documentazione ufficiale](https://jellyfin.org/docs/)

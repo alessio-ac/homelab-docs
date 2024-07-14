@@ -4,7 +4,7 @@ Proxmox utilizza KVM, un modulo del kernel Linux che lo converte in hypervisor d
 
 ## Preparazione
 
-Per creare una macchina virtuale è necessario ottenere prima l'immagine del sistema operativo che vogliamo usare sulla VM. Per questa guida utilizzero [*Debian 12*](https://www.debian.org/).
+Per creare una macchina virtuale è necessario ottenere prima l'immagine del sistema operativo che vogliamo usare sulla VM. Per questa guida utilizzerò [*Debian 12*](https://www.debian.org/).
 
 
 ![](/assets/prox-iso.png){align=right style="height:230px"}
@@ -26,14 +26,14 @@ Premere *Create VM* in alto a destra ed inserire il nome da dare alla macchina. 
     
     ![](/assets/prox-select.png)
 
-Selezionare *Q35* nel campo *Machine*, e *OVMF (UEFI)* per il *BIOS*. Per quanto riguarda il disco sul scrivere la partizioen EFI selezionare l'unica opzione disponibile al momento.
+Selezionare *Q35* nel campo *Machine*, e *OVMF (UEFI)* per il *BIOS*. Per quanto riguarda il disco sul scrivere la partizione EFI selezionare l'unica opzione disponibile al momento.
 
 ![](/assets/prox-system.png)
 
-Per quanto riguarda il disco di boot è possibile configuraro il base all'utilizzo della VM, per questa guida lascierò i settaggi di default.
+Per quanto riguarda il disco di boot è possibile configurarlo in base all'utilizzo della VM, per questa guida lascerò i settaggi di default.
 
 !!! info "Avvertenza per gli SSD"
-    Se il disco sul quale verrà installa la VM è un SSD è consigliato abilitare l'opzione *Discard* e *SSD Emulation* nel menu avanzato.
+    Se il disco sul quale verrà installata la VM è un SSD è consigliato abilitare l'opzione *Discard* e *SSD Emulation* nel menu avanzato.
 
 ![](/assets/prox-disk.png)
 
@@ -50,4 +50,4 @@ Nei prossimi menu specificare il numero di core e la quantità di memoria da ass
     
     ![](/assets/prox-ram.png)
 
-Confermare le impostazioni di default per il netowrk e il riassunto finale. A questo punto la macchina è pronta ad essere avviata. Per installare il sistema operativo è possibile procedere come su un qualunqe PC ed installare i necessari servizi seguendo le loro documentazioni.
+Confermare le impostazioni di default per il network e il riassunto finale. A questo punto la macchina è pronta ad essere avviata. Per installare il sistema operativo è possibile procedere come su un qualunque PC ed installare i necessari servizi seguendo le loro documentazioni.

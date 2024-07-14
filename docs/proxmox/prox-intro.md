@@ -13,7 +13,7 @@
 
 ## Macchine virtuali
 
-Proxmox è una piattaforma di virutalizzazione basata su Debian, utilizza l'hypervisor di Tipo 1 KVM. Utilizzo questa macchina per virtualizzare vari servizi utili per il lavoro, l'intrattenimento e, principalmente, per hobby.
+Proxmox è una piattaforma di virtualizzazione basata su Debian, utilizza l'hypervisor di Tipo 1 KVM. Utilizzo questa macchina per virtualizzare vari servizi utili per il lavoro, l'intrattenimento e, principalmente, per hobby.
 
 Le seguenti sono tutte le macchine virtuali installate:
 
@@ -29,7 +29,7 @@ VM che funge da base per tutti i servizi Docker, gestiti tramite Portainer.
 
 ### **media-server**
 
-Per tutti i servizi basati sui contenuti multimediali, è collegata allo share `media`. Vi è installo Jellyfin e vari script per lo scaricamento di media.
+Per tutti i servizi basati sui contenuti multimediali, è collegata allo share `media`. Vi è installato Jellyfin e vari script per lo scaricamento di media.
 
 - **ID**: 201
 - **OS**: Debian 12
@@ -51,7 +51,7 @@ Macchina utilizzata solamente per il remote desktop.
 
 Utilizzo il server anche per vari LXC. Dei container molto più leggeri rispetto alle VM che mi permettono di avere vari servizi isolati ad un costo di performance molto inferiore.
 
-- **100 (cloudflare-tunnel)**: Utilizzato per collegarmi al network di casa anche da remoto
+- **100 (cloudflare-tunnel)**: Utilizzato per collegarsi al network di casa anche da remoto
 - **103 (nextcloud)**: Cloud personale
 - **105 (syncthing)**: Sincronizzazione di file tra i dispositivi
 - **106 (bookstack)**: Knowledge-base che ho utilizzato principalmente per la maturità

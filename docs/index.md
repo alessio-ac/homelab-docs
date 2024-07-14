@@ -1,12 +1,12 @@
 # Documentazione homelab
 
-Questa è la documentazione completa del mio homelab, dove speigo la configuraizone e l'utilizzo di tutte le macchine presenti in esso.
+Questa documentazione fornisce una panoramica completa del mio homelab, spiegando la configurazione e l'utilizzo di tutte le macchine presenti.
 
-La documentazione è stata realizzata come punto di riferimento per me o per chi volesse replicare la stessa configurazione sulle proprie macchine.
+È stata creata come punto di riferimento per me o per chi volesse replicare la stessa configurazione sulle proprie macchine.
 
-## Contattami
+## Contatti
 
-Se necessario è possiblie conttatarmi qui:
+Se necessario è possibile contattarmi qui:
 
 - [Mail](mailto:alessio.cucinotta@ale.ac)
 - [Linkedin](https://www.linkedin.com/in/alessio-cucinotta-cms)

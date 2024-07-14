@@ -5,13 +5,13 @@ Nextcloud è un servizio di cloud personale, simile a Google Drive, ma con il co
 - [Sito ufficiale](https://nextcloud.com/)
 - [Documentazione ufficiale](https://docs.nextcloud.com/)
 
-Attualmente lo utlizzo come gestore di file nel caso non sia su una macchina Linux sulla quale posso montare gli share NFS direttamente. Offre anche la compatibilità con Joplin, programma per appunti che tramite Nextcloud sincronizza tutte le note sul server.
+Lo utilizzo come gestore di file nel caso non sia su una macchina Linux. Offre la compatibilità con Joplin, programma per appunti che sincronizza tutte le note sul server.
 
-Offre anche, come Google Drive, una completa suite di programmi web per la modifica di documenti, chamata Collabora.
+In più, come Google Drive, offre una completa suite di programmi web per la modifica di documenti, chamata [Collabora](https://www.collaboraoffice.com/).
 
 È attualmente installato su un LXC, tramite l'immagine di [TurnKey](https://www.turnkeylinux.org/nextcloud), disponibile direttamente dall'interfaccia di Proxmox.
 
-Per dare accesso agli share NFS ho montato gli share direttamente su Proxmox, li ho impostati come "Mount Point" nell'LXC e tramite l'account Admin di Nextcloud ho impostato le cartelle richeiste come "External storage". 
+Per dare accesso agli share NFS ho montato gli share direttamente su Proxmox, li ho impostati come "Mount Point" nell'LXC e tramite l'account Admin di Nextcloud ho impostato le cartelle richieste come "External storage". 
 
 === "Utilizzo"
     
