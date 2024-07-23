@@ -1,18 +1,19 @@
 site_name: Documentazione Homelab
+docs_dir: '../../docs/en'
+site_dir: '../../generated/en'
 site_url: https://homelab.ale.ac
 
 theme:
   name: material
-  language: it
+  language: en
+  custom_dir: '../../overrides/'
   palette: 
-
     - scheme: default
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
       primary: indigo
       accent: blue
-
     - scheme: slate
       toggle:
         icon: material/brightness-4
@@ -32,8 +33,8 @@ theme:
     - navigation.footer
 
 extra_css:
-  - stylesheets/extra.css
-  - stylesheets/light-extra.css
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/light-extra.css
   
 markdown_extensions:
   - admonition
@@ -50,7 +51,6 @@ plugins:
   - glightbox
   - social
   
-
 nav:
     - Home: index.md
     - Installazione e configurazione:
@@ -69,6 +69,13 @@ nav:
       - Homebox: services/homebox.md
 
 extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Italian
+      link: /it/
+      lang: it
   social:
     - icon: fontawesome/brands/linkedin 
       link: https://www.linkedin.com/in/alessio-cucinotta-cms
