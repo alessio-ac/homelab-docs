@@ -1,12 +1,15 @@
-site_name: Documentazione Homelab
+site_name: Homelab Documentation
 docs_dir: '../../docs/en'
 site_dir: '../../generated/en'
 site_url: https://homelab.ale.ac
 
+repo_url: https://github.com/alessio-ac/homelab-docs
+repo_name: homelab-docs
+
 theme:
   name: material
   language: en
-  custom_dir: '../../overrides/'
+  custom_dir: '../../assets/'
   palette: 
     - scheme: default
       toggle:
@@ -33,8 +36,8 @@ theme:
     - navigation.footer
 
 extra_css:
-  - assets/stylesheets/extra.css
-  - assets/stylesheets/light-extra.css
+  - stylesheets/extra.css
+  - stylesheets/light-extra.css
   
 markdown_extensions:
   - admonition
@@ -53,16 +56,16 @@ plugins:
   
 nav:
     - Home: index.md
-    - Installazione e configurazione:
+    - Installation and configuration:
       - TrueNAS Scale:
-          - Introduzione: truenas/nas-intro.md
-          - Installazione: truenas/nas-install.md
-          - Configurazione: truenas/nas-conf.md
+          - Introduction: truenas/nas-intro.md
+          - Installation: truenas/nas-install.md
+          - Configuration: truenas/nas-conf.md
       - Proxmox:
-          - Introduzione: proxmox/prox-intro.md
-          - Installazione: proxmox/prox-install.md
-          - Macchine Virtuali: proxmox/vm.md
-    - Servizi: 
+          - Introduction: proxmox/prox-intro.md
+          - Installation: proxmox/prox-install.md
+          - Virtual Machines: proxmox/vm.md
+    - Services:
       - Nextcloud: services/nextcloud.md
       - BookStack: services/bookstack.md
       - Jellyfin: services/jellyfin.md

@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/light-extra.css">
+      <link rel="stylesheet" href="../../stylesheets/light-extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -162,9 +162,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Cambia in modalità scura"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Cambia in modalità scura" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
@@ -172,9 +172,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Cambia in modalità chiara"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Cambia in modalità chiara" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
@@ -921,7 +921,7 @@
 <p>Proxmox utilizza KVM, un modulo del kernel Linux che lo converte in hypervisor di tipo 1.</p>
 <h2 id="preparazione">Preparazione</h2>
 <p>Per creare una macchina virtuale è necessario ottenere prima l'immagine del sistema operativo che vogliamo usare sulla VM. Per questa guida utilizzerò <a href="https://www.debian.org/"><em>Debian 12</em></a>.</p>
-<p><a class="glightbox" href="/assets/prox-iso.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="/assets/prox-iso.png" style="height:230px" /></a></p>
+<p><a class="glightbox" href="../../assets/prox-iso.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="../../assets/prox-iso.png" style="height:230px" /></a></p>
 <p>Dopo aver scaricato l'immagine cliccare su <em>local</em> nel menu a sinistra e <em>ISO Images</em> nel sottomenu, da qui premere su <em>Upload</em>, selezionare l'immagine appena scaricata ed aspettare che venga caricata sul server.</p>
 <p><br></p>
 <h2 id="creazione-della-vm">Creazione della VM</h2>
@@ -929,21 +929,21 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Step 1</label><label for="__tabbed_1_2">Step 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><a class="glightbox" href="/assets/prox-name.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/prox-name.png" /></a></p>
+<p><a class="glightbox" href="../../assets/prox-name.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/prox-name.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="/assets/prox-select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/prox-select.png" /></a></p>
+<p><a class="glightbox" href="../../assets/prox-select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/prox-select.png" /></a></p>
 </div>
 </div>
 </div>
 <p>Selezionare <em>Q35</em> nel campo <em>Machine</em>, e <em>OVMF (UEFI)</em> per il <em>BIOS</em>. Per quanto riguarda il disco sul scrivere la partizione EFI selezionare l'unica opzione disponibile al momento.</p>
-<p><a class="glightbox" href="/assets/prox-system.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/prox-system.png" /></a></p>
+<p><a class="glightbox" href="../../assets/prox-system.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/prox-system.png" /></a></p>
 <p>Per quanto riguarda il disco di boot è possibile configurarlo in base all'utilizzo della VM, per questa guida lascerò i settaggi di default.</p>
 <div class="admonition info">
 <p class="admonition-title">Avvertenza per gli SSD</p>
 <p>Se il disco sul quale verrà installata la VM è un SSD è consigliato abilitare l'opzione <em>Discard</em> e <em>SSD Emulation</em> nel menu avanzato.</p>
 </div>
-<p><a class="glightbox" href="/assets/prox-disk.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/prox-disk.png" /></a></p>
+<p><a class="glightbox" href="../../assets/prox-disk.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/prox-disk.png" /></a></p>
 <p>Nei prossimi menu specificare il numero di core e la quantità di memoria da associare alla VM.</p>
 <div class="admonition info">
 <p class="admonition-title">Tipo di CPU</p>
@@ -952,10 +952,10 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">CPU</label><label for="__tabbed_2_2">Memoria</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><a class="glightbox" href="/assets/prox-cpu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/prox-cpu.png" /></a></p>
+<p><a class="glightbox" href="../../assets/prox-cpu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/prox-cpu.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="/assets/prox-ram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/prox-ram.png" /></a></p>
+<p><a class="glightbox" href="../../assets/prox-ram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/prox-ram.png" /></a></p>
 </div>
 </div>
 </div>

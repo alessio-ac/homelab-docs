@@ -14,4 +14,4 @@ Offre anche la possibilità di ascoltare la musica scaricata, ma nel mio caso no
 
 Non richiede alcuna configurazione per un utilizzo basilare, basta installare e aggiungere i percorsi desiderati dall'interfaccia Web.
 
-![](/assets/jelly.gif)
+![](../jelly.gif)

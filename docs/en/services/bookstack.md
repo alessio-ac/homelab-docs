@@ -1,11 +1,11 @@
 # Bookstack
 
-Bookstack è una piattaforma per organizzare e immagazzinare informazioni.
+Bookstack is a platform for organizing and storing information.
 
-Utilizza Markdown per la creazione dei documenti ed offre un'interfaccia semplice per la navigazione delle informazioni.
+It uses Markdown for document creation and offers a simple interface for navigating information.
 
-È attualmente installato su un LXC tramite l'immagine fornita da TurnKey, disponibile di default su Proxmox.
+It is currently installed on an LXC container using the image provided by TurnKey, which is available by default on Proxmox.
 
-Il mio utilizzo principale è stato durante l'ultimo anno scolastico per la preparazione agli esami. 
+It was mainly used during the last year of school to study for the exams.
 
-![](/assets/book.gif)
+![](../book.gif)

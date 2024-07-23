@@ -37,4 +37,4 @@ Homebox è un servizio per la gestione dell'inventario personale. Offre un'inter
     
 === "Screenshot"
 
-    ![](/assets/homebox.png)
+    ![](../homebox.png)

@@ -1,38 +1,37 @@
-# Installazione di TrueNAS Scale
+#  TrueNAS Scale Installation
 
-!!! warning "Attenzione"
-    La seguente guida è scritta per la versione **24.04.1.1** di TrueNAS SCALE, ed è stata effettuata su una macchina virtuale.
+!!! warning "Warning"
+    This guide was written for version **24.04.1.1** of TrueNAS SCALE and has been performed on a virtual machine.
 
+## ISO Preparation
 
-## Preparazione ISO
+Download the operating system image from the official website. It is recommended to verify the integrity of the downloaded image using the files provided by the site with PGP or SHA256.
 
-Scaricare l'immagine del sistema operativo dal sito ufficiale. È consigliato verificare la validità dell'immagine scaricata tramite i file forniti dal sito con PGP o SHA256.
-
-Una volta verificata l'immagine va inserita all'interno di una memoria flash per poterla fornire al sistema di riferimento. È possibile farlo tramite `dd` su Linux:
+Once the image has been verified, it should be written to a flash memory drive to provide it to the target system. This can be done using `dd` on Linux:
 
 ```
-dd bs=4M if=[PERCORSO ISO] of=/dev/[PERCORSO MEMORIA FLASH] conv=fsync oflag=direct status=progress
+dd bs=4M if=[ISO PATH] of=/dev/[FLASH MEMORY PATH] conv=fsync oflag=direct status=progress
 ```
 
-## Installazione
+## Installation
 
-Inserire la memoria flash nel PC di riferimento e far partire il boot da essa tramite il boot menu (solitamente accessibile premendo F11 all'avvio del PC). Per l'installazione di TrueNAS è necessario disattivare il *secure boot*.
+Insert the flash memory into the target PC and boot from it using the boot menu (usually accessible by pressing F11 during the boot sequence). Note that *secure boot* must be disabled to install TrueNAS.
 
-Al boot apparirà una schermata di selezione, basta aspettare 5 secondi e la prima opzione verrà scelta automaticamente.
+At boot, a selection screen will appear; simply wait 5 seconds and the first option will be chosen automatically.
 
-![](/assets/boot.png)
+![](../boot.png)
 
-Al primo menu mostrato dopo la sequenza di avvio selezionare *Install/Upgrade*
+On the first menu shown after the boot sequence, select *Install/Upgrade*.
 
-![](/assets/install-upgrade.png)
+![](../install-upgrade.png)
 
-Scegliere il disco sul quale installare il sistema operativo. È consigliato usare **due** dischi di boot, per avere la sicurezza che il sistema rimanga operativo anche in caso fallisca uno dei due dischi. Nel mio caso sceglierò il disco virtuale `/dev/sdb`.
+Choose the disk on which to install the operating system. It is advisable to use **two** boot disks to ensure that the system remains operational even if one of the disks fails. In my case, I will select the virtual disk `/dev/sdb`.
 
-![](/assets/drive.png)
+![](../drive.png)
 
-Confermare la selezione e creare selezionare la terza opzione per configurare l'utente *admin* dall'interfaccia Web.
+Confirm the selection and choose the third option to configure the *admin* user from the Web interface.
 
-![](/assets/admin.png)
+![](../admin.png)
 
 
-Alla fine dell'installazione riavviare e dalla configurazione del BIOS scegliere il disco sul quale è stato installato TrueNAS come disco principale di avvio.
+After the installation is complete, reboot the system and, in the BIOS configuration, select the disk on which TrueNAS was installed as the primary boot disk.

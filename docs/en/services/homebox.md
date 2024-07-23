@@ -1,13 +1,13 @@
 # Homebox
 
-Homebox è un servizio per la gestione dell'inventario personale. Offre un'interfaccia web semplice da utilizzare ed un sistema di ID per tracciare ogni singolo oggetto.
+Homebox is a personal inventory management system. It offers a simple web interface and an ID system to track each individual item.
 
-- [Documentazione ufficale](https://hay-kot.github.io/homebox/)
-- [Demo dimostrativa](https://homebox.fly.dev/)
+- [Official documentation](https://hay-kot.github.io/homebox/)
+- [Demo](https://homebox.fly.dev/)
 
-È utile per tenere traccia di cavi, periferiche e componenti PC che attualmente non utilizzo.
+I use it to keep track of cables, peripherals, and PC components that I am not currently using.
 
-È attualmente installato con Docker in una VM nel mio server hypervisor. La parte Docker viene gestita tramite Portainer.
+It is currently installed with Docker in a VM on my hypervisor server. The Docker part is managed via Portainer.
 
 === "Docker compose"
 
@@ -37,4 +37,4 @@ Homebox è un servizio per la gestione dell'inventario personale. Offre un'inter
     
 === "Screenshot"
 
-    ![](/assets/homebox.png)
+    ![](../homebox.png)

@@ -15,7 +15,7 @@ Per dare accesso agli share NFS ho montato gli share direttamente su Proxmox, li
 
 === "Utilizzo"
     
-    ![](/assets/collabora.gif)
+    ![](../collabora.gif)
 
 === "Configurazione LXC"
 
@@ -43,5 +43,5 @@ Per dare accesso agli share NFS ho montato gli share direttamente su Proxmox, li
 
 === "Aggiunta degli share a Nextcloud"
 
-    ![](/assets/nextcloud-admin.png)
+    ![](../nextcloud-admin.png)
 

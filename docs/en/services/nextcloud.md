@@ -1,23 +1,23 @@
 # Nextcloud
 
-Nextcloud è un servizio di cloud personale, simile a Google Drive, ma con il controllo completo dei propri dati.
+Nextcloud is a personal cloud service, similar to Google Drive, but with full control over your own data.
 
-- [Sito ufficiale](https://nextcloud.com/)
-- [Documentazione ufficiale](https://docs.nextcloud.com/)
+- [Official website](https://nextcloud.com/)
+- [Official documentation](https://docs.nextcloud.com/)
 
-Lo utilizzo come gestore di file nel caso non sia su una macchina Linux. Offre la compatibilità con Joplin, programma per appunti che sincronizza tutte le note sul server.
+I use it as a file manager when not on a Linux machine. It is compatible with Joplin, a note-taking app that synchronizes all notes to the server.
 
-In più, come Google Drive, offre una completa suite di programmi web per la modifica di documenti, chamata [Collabora](https://www.collaboraoffice.com/).
+Additionally, like Google Drive, it offers a complete suite of web programs for document editing, called [Collabora](https://www.collaboraoffice.com/).
 
-È attualmente installato su un LXC, tramite l'immagine di [TurnKey](https://www.turnkeylinux.org/nextcloud), disponibile direttamente dall'interfaccia di Proxmox.
+It is currently installed on an LXC container using the TurnKey image, available directly from the Proxmox interface.
 
-Per dare accesso agli share NFS ho montato gli share direttamente su Proxmox, li ho impostati come "Mount Point" nell'LXC e tramite l'account Admin di Nextcloud ho impostato le cartelle richieste come "External storage". 
+To provide access to NFS shares, I mounted the shares directly on Proxmox, set them as mount points in the LXC, and added the required folders as "External storage" using the Admin account in Nextcloud.
 
-=== "Utilizzo"
+=== "Usage"
     
-    ![](/assets/collabora.gif)
+    ![](../collabora.gif)
 
-=== "Configurazione LXC"
+=== "LXC Config file"
 
     ``` yaml title="/etc/pve/lxc/103.conf"
     arch: amd64
@@ -38,10 +38,9 @@ Per dare accesso agli share NFS ho montato gli share direttamente su Proxmox, li
     rootfs: nvme-lvm:vm-103-disk-0,size=16G
     swap: 512
     unprivileged: 1
-
     ```
 
-=== "Aggiunta degli share a Nextcloud"
+=== "Adding shares to Nextcloud"
 
-    ![](/assets/nextcloud-admin.png)
+    ![](../nextcloud-admin.png)
 

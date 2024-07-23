@@ -8,4 +8,4 @@ Utilizza Markdown per la creazione dei documenti ed offre un'interfaccia semplic
 
 Il mio utilizzo principale è stato durante l'ultimo anno scolastico per la preparazione agli esami. 
 
-![](/assets/book.gif)
+![](../book.gif)

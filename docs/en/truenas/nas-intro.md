@@ -1,6 +1,6 @@
 # File Server
 
-## Specifiche sistema
+## System info
 
 - **OS:** TrueNAS Scale
 - **IP:** 192.168.1.194
@@ -13,18 +13,18 @@
 
 ## Storage
 
-RAID1 è l'unica soluzione disponibile con due dischi che mi permette di avere ridondanza.
+RAID1 is the only available solution with two disks that allows me to have redundancy.
 
-Per tenere sotto controllo la salute dei dischi ho impostato degli scrub completi della pool e dei test S.M.A.R.T. periodici. I test automatizzati seguono il seguente programma:
+To monitor the health of the disks, I have set up full pool scrubs and periodic S.M.A.R.T. tests. The automated tests follow this schedule:
 
-- **Scrub**: alle 04:00 ogni 1 e 15 del mese
-- **Long S.M.A.R.T.**: alle 04:00 ogni 2  e 16 del mese
-- **Short S.M.A.R.T.**: alle 04:00 ogni 7, 12, 22 e 27 del mese
+- **Scrub**: at 04:00 AM on the 1st and 15th of each month
+- **Long S.M.A.R.T.**: at 04:00 AM on the 2nd and 16th of each month
+- **Short S.M.A.R.T.**: at 04:00 AM on the 7th, 12th, 22nd, and 27th of each month
 
 
 ## File share
 
-La pool è divisa tramite dataset ZFS in base all'utilizzo determinato. I dataset sono condivisi sul network tramite NFS per i sistemi Linux ed SMB per quelli Windows.
+The pool is divided using ZFS datasets based on the determined usage. The datasets are shared on the network via NFS for Linux systems and SMB for Windows systems.
 
 ```
 truenas-pool

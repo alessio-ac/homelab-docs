@@ -1,17 +1,17 @@
 # Jellyfin
 
-Jellyfin è un servizio di media streaming personale. È interamente open-source e gratuito, a differenza di Plex.
+Jellyfin is a personal media streaming service. It is entirely open-source and free, unlike Plex.
 
-- [Sito ufficiale](https://jellyfin.org/)
-- [Documentazione ufficiale](https://jellyfin.org/docs/)
-- [Demo dimostrativa](https://demo.jellyfin.org/stable/web/)
+- [Official Website](https://jellyfin.org/)
+- [Official documentation](https://jellyfin.org/docs/)
+- [Demo](https://demo.jellyfin.org/stable/web/)
 
-Lo utilizzo per avere un accesso facile ai video sul mio server da qualunque dispositivo.
+I use it to have easy access to videos on my file server from any device.
 
-Offre anche la possibilità di ascoltare la musica scaricata, ma nel mio caso non utilizzo questa funzione in quanto preferisco ascoltare la mia collezione con player client-side come [MPD](https://www.musicpd.org/).
+It also offers the ability to play downloaded music, but in my case, I don’t use this feature as I prefer to listen to my collection with client-side players like [MPD](https://www.musicpd.org/).
 
-È attualmente installato su una VM nel server hypervisor, alla quale sono montati gli share sottostanti al dataset *Media*.
+It is currently installed on a VM in the hypervisor server, with the *media* datasets mounted as shares.
 
-Non richiede alcuna configurazione per un utilizzo basilare, basta installare e aggiungere i percorsi desiderati dall'interfaccia Web.
+No special configuration is required for basic use; just install it and add the desired paths from the Web interface.
 
-![](/assets/jelly.gif)
+![](../jelly.gif)

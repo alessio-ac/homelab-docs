@@ -1,89 +1,89 @@
  
-# Configurazione di TrueNAS Scale
+# TrueNAS Scale Configuration
 
-## Creazione utente admin
+## Creation of admin user
 
-Al primo avvio del server ci verrà mostrato sul TTY l'IP locale del server. Inserendo questo indirizzo su un qualunque browser sarà possibile accedere all'interfaccia web del server.
+On the first boot, the local IP of the server will be shown on the TTY. By entering this address on any browser, it will be possible to access the Web interface of the server.
 
-![](/assets/tty.png)
+![](../tty.png)
 
-Dall'interfaccia Web verrà scelta una password per l'utente *admin*.
+Create a password for the *admin* user.
 
-![](/assets/creds.png)
+![](../creds.png)
 
-## Gestione dischi
+## Disk management
 
 ### Pool
 
-Adesso che abbiamo accesso alla dashboard di TrueNAS è necessario impostare lo storage. Le istruzioni che seguono spiegano come creare una configurazione *mirrored*, tuttavia ci sono molti tipi di configurazioni possibili in base al numero di dischi.
+Now that we have access to the TrueNAS dashboard, it is necessary to set up the storage. The following instructions explain how to create a mirrored configuration, however, there are many types of configurations possible depending on the number of disks.
 
-Cliccare sul menu a sinistra *Storage*, e di seguito *Create Pool*
+Click on the *Storage* menu on the left, and then *Create Pool*.
 
-Da questa schermata sarà possibile dare un nome alla pool.
+From this screen, you will be able to name the pool.
 
-![](/assets/pool-name.png)
+![](../pool-name.png)
 
-Selezionare *Mirror* come Layout, e lasciare che la selezione automatica dei dischi imposti il resto.
+Select *Mirror* as the Layout, and let the automatic disk selection set up the rest.
 
-![](/assets/pool-disk.png)
+![](../pool-disk.png)
 
-Se necessario impostare anche i dispositivi di:
+If necessary also set up these devices:
 
 - LOG ZFS*
-- ricambio (*spare*)
+- spare disk
 - cache L2ARC
 - Metadata
-- Deduplicazione
+- Deduplication
 
-Una volta selezionato tutto il necessario, premere *Create Pool*.
+Once everything necessary is selected, press *Create Pool*.
 
 ### Dataset
 
-Le nuove pool hanno un dataset di *root* che si può dividere in più dataset sottostanti, ovvero dei filesystem che memorizzano dati con permessi specifici.
+The pool now has a *root* by default, which can be divided into multiple datasets. These datasets can function as filesystems, each capable of storing data with specific permissions.
 
-!!! info "Attenzione"
-    I Dataset non sono l'unica opzione disponibile, gli *zvol* sono dei dispositivi a blocchi virtuali con una dimensione pre-impostata. Solitamente si utilizzano con il protocollo di condivisione file iSCSI.
+!!! info "Warning"
+    Datasets are not the only available option, *zvols* are virtual block devices with a pre-set size. They are usually used with the iSCSI file-sharing protocol.
 
-Per creare un nuovo Dataset basata cliccare su *Datasets* nel menu a sinistra e cliccare *Add Dataset*
+To create a new Dataset, click on *Datasets* in the left menu and click *Add Dataset*
 
-Da qui, basta dare un nome al dataset e premere *Save*.
+From here, just name the dataset and press *Save*.
 
-![](/assets/dataset-name.png)
+![](../dataset-name.png)
 
-È possibile creare infiniti dataset in base agli utilizzi necessari. Si possono creare sottostanti a Dataset già esistenti per rendere più leggibile ed organizzata la pool. 
+It is possible to create infinite datasets based on the necessary uses. They can be created under existing datasets to make the pool more readable and organized.
 
 ## File sharing
 
-Adesso che abbiamo creato i dataset necessari è il momento di renderli accessibili sul nostro network.
+Now that we have created the necessary datasets, it’s time to make them accessible on our network.
 
-### Protocolli
+### Protocols
 
-È possibile utilizzare diversi protocolli per lo sharing. In questo caso utilizzerò NFS, protocollo dedicato ai dispositivi con sistema operativo Linux.
+You can use different protocols for sharing. In this case, I will use NFS, beacuse it has the best Linux compatibility.
 
-Prima di tutto bisogna avviare i servizi necessari per far funzionare i protocolli di sharing. Cliccare su *System Settings*, e nel sottomenu che si apre cliccare su *Services*. Da qui abilitare i protocolli necessari e cliccare sulla spunta *Start Automatically* per fare in modo che siano già pronti all'avvio del server. Nel mio caso cliccherò su NFS.
+First, you need to start the necessary services for the sharing protocols to work. Click on *System Settings*, and in the submenu that opens, click on *Services*. From here, enable the necessary protocols and check the *Start Automatically* box to ensure they are ready at server startup. In my case, I will click on NFS.
 
-![](/assets/share-protocol.png)
+![](../share-protocol.png)
 
-### Creazione share
+### Share creation
 
-Dal menu premere *Shares*, e selezionare *Add* in base al protocollo da utilizzare, nel mio caso utilizzerò NFS.
+From the menu, press *Shares*, and select *Add* based on the protocol to be used.
 
-![](/assets/create-share.png){align=left}
+![](../create-share.png){align=left}
 
-![](/assets/add-share.png){align=right style="height:500px"}
+![](../add-share.png){align=right style="height:500px"}
 
-Selezionare il percorso del dataset che vogliamo condividere, inserire una descrizione dello share, e inserire il network sul quale lo share sarà disponibile.
+Select the path of the dataset you want to share, enter a description of the share, and specify the network on which the share will be available.
 
-A questo punto, bisogna modificare i permessi del dataset per renderlo modificabile.
+At this point, you need to modify the dataset permissions to make it writable.
 
-Andare sul menu *Dataset*, selezionare il dataset da modificare, e premere su *Edit* su *Permissions*. Dalla pagina aperta selezionare *Write* su *Group* e *Other*, e premere save.
+Go to the *Dataset* menu, select the dataset to modify, and click on *Edit* under *Permissions*. On the opened page, select *Write* for *Group* and *Other*, and press *Save*.
 
-![](/assets/dataset-permission.png){style="width:475px"}
+![](../dataset-permission.png){style="width:475px"}
 
 
-### Montare lo share
+### Mounting the share
 
-Per accedere allo share appena creato e condiviso basta montarlo con il comando `mount` su un terminale Linux.
+To access the share simply mount it with the `mount` command on a Linux terminal.
 
 ```
 sudo mount -t nfs 192.168.1.206:/mnt/test-pool/documents ~/Documents/share/ 

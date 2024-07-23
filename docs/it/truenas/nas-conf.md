@@ -5,11 +5,11 @@
 
 Al primo avvio del server ci verrà mostrato sul TTY l'IP locale del server. Inserendo questo indirizzo su un qualunque browser sarà possibile accedere all'interfaccia web del server.
 
-![](/assets/tty.png)
+![](../tty.png)
 
 Dall'interfaccia Web verrà scelta una password per l'utente *admin*.
 
-![](/assets/creds.png)
+![](../creds.png)
 
 ## Gestione dischi
 
@@ -21,11 +21,11 @@ Cliccare sul menu a sinistra *Storage*, e di seguito *Create Pool*
 
 Da questa schermata sarà possibile dare un nome alla pool.
 
-![](/assets/pool-name.png)
+![](../pool-name.png)
 
 Selezionare *Mirror* come Layout, e lasciare che la selezione automatica dei dischi imposti il resto.
 
-![](/assets/pool-disk.png)
+![](../pool-disk.png)
 
 Se necessario impostare anche i dispositivi di:
 
@@ -48,7 +48,7 @@ Per creare un nuovo Dataset basata cliccare su *Datasets* nel menu a sinistra e 
 
 Da qui, basta dare un nome al dataset e premere *Save*.
 
-![](/assets/dataset-name.png)
+![](../dataset-name.png)
 
 È possibile creare infiniti dataset in base agli utilizzi necessari. Si possono creare sottostanti a Dataset già esistenti per rendere più leggibile ed organizzata la pool. 
 
@@ -62,15 +62,15 @@ Adesso che abbiamo creato i dataset necessari è il momento di renderli accessib
 
 Prima di tutto bisogna avviare i servizi necessari per far funzionare i protocolli di sharing. Cliccare su *System Settings*, e nel sottomenu che si apre cliccare su *Services*. Da qui abilitare i protocolli necessari e cliccare sulla spunta *Start Automatically* per fare in modo che siano già pronti all'avvio del server. Nel mio caso cliccherò su NFS.
 
-![](/assets/share-protocol.png)
+![](../share-protocol.png)
 
 ### Creazione share
 
 Dal menu premere *Shares*, e selezionare *Add* in base al protocollo da utilizzare, nel mio caso utilizzerò NFS.
 
-![](/assets/create-share.png){align=left}
+![](../create-share.png){align=left}
 
-![](/assets/add-share.png){align=right style="height:500px"}
+![](../add-share.png){align=right style="height:500px"}
 
 Selezionare il percorso del dataset che vogliamo condividere, inserire una descrizione dello share, e inserire il network sul quale lo share sarà disponibile.
 
@@ -78,7 +78,7 @@ A questo punto, bisogna modificare i permessi del dataset per renderlo modificab
 
 Andare sul menu *Dataset*, selezionare il dataset da modificare, e premere su *Edit* su *Permissions*. Dalla pagina aperta selezionare *Write* su *Group* e *Other*, e premere save.
 
-![](/assets/dataset-permission.png){style="width:475px"}
+![](../dataset-permission.png){style="width:475px"}
 
 
 ### Montare lo share

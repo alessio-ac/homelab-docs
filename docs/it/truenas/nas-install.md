@@ -20,19 +20,19 @@ Inserire la memoria flash nel PC di riferimento e far partire il boot da essa tr
 
 Al boot apparirà una schermata di selezione, basta aspettare 5 secondi e la prima opzione verrà scelta automaticamente.
 
-![](/assets/boot.png)
+![](../boot.png)
 
 Al primo menu mostrato dopo la sequenza di avvio selezionare *Install/Upgrade*
 
-![](/assets/install-upgrade.png)
+![](../install-upgrade.png)
 
 Scegliere il disco sul quale installare il sistema operativo. È consigliato usare **due** dischi di boot, per avere la sicurezza che il sistema rimanga operativo anche in caso fallisca uno dei due dischi. Nel mio caso sceglierò il disco virtuale `/dev/sdb`.
 
-![](/assets/drive.png)
+![](../drive.png)
 
 Confermare la selezione e creare selezionare la terza opzione per configurare l'utente *admin* dall'interfaccia Web.
 
-![](/assets/admin.png)
+![](../admin.png)
 
 
 Alla fine dell'installazione riavviare e dalla configurazione del BIOS scegliere il disco sul quale è stato installato TrueNAS come disco principale di avvio.

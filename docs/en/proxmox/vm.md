@@ -1,53 +1,51 @@
-# Macchine Virtuali su Proxmox
+# Virtual Machines on Proxmox
 
-Proxmox utilizza KVM, un modulo del kernel Linux che lo converte in hypervisor di tipo 1.
+Proxmox uses KVM, a Linux kernel module that turns it into a Type 1 hypervisor.
 
-## Preparazione
+## Preparation
 
-Per creare una macchina virtuale è necessario ottenere prima l'immagine del sistema operativo che vogliamo usare sulla VM. Per questa guida utilizzerò [*Debian 12*](https://www.debian.org/).
+To create a virtual machine, you first need to obtain the operating system image you want to use on the VM. For this guide, I will use [*Debian 12*](https://www.debian.org/).
 
+![](../prox-iso.png){align=right style="height:230px"}
 
-![](/assets/prox-iso.png){align=right style="height:230px"}
-
-Dopo aver scaricato l'immagine cliccare su *local* nel menu a sinistra e *ISO Images* nel sottomenu, da qui premere su *Upload*, selezionare l'immagine appena scaricata ed aspettare che venga caricata sul server.
-
+After downloading the image, click on *local* in the left menu and *ISO Images* in the submenu. From there, press *Upload*, select the downloaded image, and wait for it to be uploaded to the server.
 <br>
 
-## Creazione della VM
+## Creating the VM
 
-Premere *Create VM* in alto a destra ed inserire il nome da dare alla macchina. Successivamente selezionare l'ISO appena scaricata dalla lista.
+Click *Create VM* in the top right and enter a name for the machine. Then, select the recently downloaded ISO from the list.
 
 
 === "Step 1"
 
-    ![](/assets/prox-name.png)
+    ![](../prox-name.png)
 
 === "Step 2"
     
-    ![](/assets/prox-select.png)
+    ![](../prox-select.png)
 
-Selezionare *Q35* nel campo *Machine*, e *OVMF (UEFI)* per il *BIOS*. Per quanto riguarda il disco sul scrivere la partizione EFI selezionare l'unica opzione disponibile al momento.
+Select *Q35* in the *Machine* field, and *OVMF (UEFI)* for the *BIOS*. For the disk where the EFI partition will be written, select the only available option at the moment.
 
-![](/assets/prox-system.png)
+![](../prox-system.png)
 
-Per quanto riguarda il disco di boot è possibile configurarlo in base all'utilizzo della VM, per questa guida lascerò i settaggi di default.
+For the boot disk, you can configure it based on the VM’s usage; for this guide, I will leave the default settings.
 
-!!! info "Avvertenza per gli SSD"
-    Se il disco sul quale verrà installata la VM è un SSD è consigliato abilitare l'opzione *Discard* e *SSD Emulation* nel menu avanzato.
+!!! info "Warning for SSDs"
+    If the disk where the VM will be installed is an SSD, it is recommended to enable the *Discard* and *SSD Emulation* options in the advanced menu.
 
-![](/assets/prox-disk.png)
+![](../prox-disk.png)
 
-Nei prossimi menu specificare il numero di core e la quantità di memoria da associare alla VM.
+In the following menus, specify the number of cores and the amount of memory to assign to the VM.
 
-!!! info "Tipo di CPU"
-    In quasi tutti i casi è consigliato utilizzare il tipo *Host* per la CPU, in quanto è il più performante ed efficace, utilizzare altri tipi solo in caso il sistema operativo da installare richiede degli specifici tipi di CPU.
+!!! info "CPU Type"
+    Typically, it is recommended to use the *host* CPU type, as it is the most performant and efficient. Use other types only if the operating system to be installed requires specific CPU types.
 
 === "CPU"
 
-    ![](/assets/prox-cpu.png)
+    ![](../prox-cpu.png)
 
-=== "Memoria"
+=== "Memory"
     
-    ![](/assets/prox-ram.png)
+    ![](../prox-ram.png)
 
-Confermare le impostazioni di default per il network e il riassunto finale. A questo punto la macchina è pronta ad essere avviata. Per installare il sistema operativo è possibile procedere come su un qualunque PC ed installare i necessari servizi seguendo le loro documentazioni.
+Confirm the default network settings and the final summary. At this point, the machine is ready to be started. To install the operating system, you can proceed as on any PC and install the necessary services by following their own documentation.

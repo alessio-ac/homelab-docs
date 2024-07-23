@@ -1,45 +1,46 @@
-# Installazione di Proxmox
+# Proxmox Installation
 
-!!! warning "Attenzione"
-    La seguente guida è scritta per la versione **8.2** di Proxmox, ed è stata effettuata su una macchina virtuale.
+!!! warning "Warning"
+    This guide was written for version **8.2** of Proxmox and has been performed on a virtual machine.
 
-## Preparazione ISO
+## ISO Preparation
 
-Scaricare l'immagine del sistema operativo dal sito ufficiale. È consigliato verificare la validità dell'immagine scaricata tramite i file forniti dal sito con PGP o SHA256.
+Download the operating system image from the official website. It is recommended to verify the integrity of the downloaded image using the files provided by the site with PGP or SHA256.
 
-Una volta verificata l'immagine va inserita all'interno di una memoria flash per poterla fornire al sistema di riferimento. È possibile farlo tramite `dd` su Linux:
+Once the image has been verified, it should be written to a flash memory drive to provide it to the target system. This can be done using `dd` on Linux:
 
 ```
-dd bs=4M if=[PERCORSO ISO] of=/dev/[PERCORSO MEMORIA FLASH] conv=fsync oflag=direct status=progress
+dd bs=4M if=[ISO PATH] of=/dev/[FLASH MEMORY PATH] conv=fsync oflag=direct status=progress
 ```
 
-## Installazione
+## Installation
 
-Inserire la memoria flash nel PC di riferimento e far partire il boot da essa tramite il boot menu (solitamente accessibile premendo F11 all'avvio del PC).
+Insert the flash memory into the target PC and boot from it using the boot menu (usually accessible by pressing F11 during the boot sequence).
 
-Al boot apparirà una schermata di selezione, basta aspettare 5 secondi e la prima opzione verrà scelta automaticamente.
+At boot, a selection screen will appear; simply wait 5 seconds and the first option will be chosen automatically.
 
-Per prima cosa accettare l'EULA e selezionare il disco su cui verrà installato Proxmox. Nel mio caso */dev/sda*.
+First, accept the EULA and select the disk where Proxmox will be installed. In my case, */dev/sda*.
 
-![](/assets/prox-drive.png)
+![](../prox-drive.png)
 
-Selezionare lo stato, il fuso orario e il layout della tastiera.
+Select the country, time zone, and keyboard layout.
 
-Creare una password ed inserire una mail.
+Create a password and enter an email.
 
-!!! info "Inserimento mail"
-    Il server invierà mail all'indirizzo inserito in caso di errori gravi nel sistema. Se non dovesse essere necessario ricevere gli avvisi è possibile inserire una mail finta.
 
-![](/assets/prox-creds.png)
+!!! info "Email Entry"
+    The server will send emails to the entered address in case of critical system errors. If receiving alerts is not necessary, you can enter a dummy email.
 
-Selezionare la corretta interfaccia di rete, ed inserire un hostname. L'hostname con indirizzo di proprietà è importante solo se si ha intenzione di creare cluster o di esporre proxmox all'internet, nel caso di utilizzo per homelab è possibile inserire un hostname a piacere. Per quanto riguarda l'indirizzo IP, il Gateway ed il server DNS, le opzioni di default vanno bene.
+![](../prox-creds.png)
 
-![](/assets/prox-network.png)
+Select the correct network interface and enter a hostname. The hostname with a proper domain is important only if you plan to create clusters or expose Proxmox to the internet. For homelab use, you can enter any hostname you like. For the IP address, Gateway, and DNS server, the default options are sufficient.
 
-Confermare le impostazioni scelte e aspettare che Proxmox si installi.
+![](../prox-network.png)
 
-![](/assets/prox-summary.png)
+Confirm the chosen settings and wait for Proxmox to install.
 
-Dopo l'installazione il sistema si riavvierà sul TTY, il quale mostrerà l'indirizzo del server, navigando a quell'indirizzo su un qualunque browser sarà possibile inserire le credenziali create prima ed accedere alla Web UI di Proxmox. A questo punto il sistema è pronto alla creazione di VM e LXC.
+![](../prox-summary.png)
 
-![](/assets/prox-ui.png)
+After the installation, the system will reboot to the TTY, which will display the server's address. Navigating to this address in any browser will allow you to enter the previously created credentials and access the Proxmox Web UI. At this point, the system is ready for creating VMs and LXC containers.
+
+![](../prox-ui.png)

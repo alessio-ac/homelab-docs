@@ -21,7 +21,7 @@ Al boot apparirà una schermata di selezione, basta aspettare 5 secondi e la pri
 
 Per prima cosa accettare l'EULA e selezionare il disco su cui verrà installato Proxmox. Nel mio caso */dev/sda*.
 
-![](/assets/prox-drive.png)
+![](../prox-drive.png)
 
 Selezionare lo stato, il fuso orario e il layout della tastiera.
 
@@ -30,16 +30,16 @@ Creare una password ed inserire una mail.
 !!! info "Inserimento mail"
     Il server invierà mail all'indirizzo inserito in caso di errori gravi nel sistema. Se non dovesse essere necessario ricevere gli avvisi è possibile inserire una mail finta.
 
-![](/assets/prox-creds.png)
+![](../prox-creds.png)
 
 Selezionare la corretta interfaccia di rete, ed inserire un hostname. L'hostname con indirizzo di proprietà è importante solo se si ha intenzione di creare cluster o di esporre proxmox all'internet, nel caso di utilizzo per homelab è possibile inserire un hostname a piacere. Per quanto riguarda l'indirizzo IP, il Gateway ed il server DNS, le opzioni di default vanno bene.
 
-![](/assets/prox-network.png)
+![](../prox-network.png)
 
 Confermare le impostazioni scelte e aspettare che Proxmox si installi.
 
-![](/assets/prox-summary.png)
+![](../prox-summary.png)
 
 Dopo l'installazione il sistema si riavvierà sul TTY, il quale mostrerà l'indirizzo del server, navigando a quell'indirizzo su un qualunque browser sarà possibile inserire le credenziali create prima ed accedere alla Web UI di Proxmox. A questo punto il sistema è pronto alla creazione di VM e LXC.
 
-![](/assets/prox-ui.png)
+![](../prox-ui.png)

@@ -3,21 +3,24 @@ docs_dir: '../../docs/it'
 site_dir: '../../generated/it'
 site_url: https://homelab.ale.ac
 
+repo_url: https://github.com/alessio-ac/homelab-docs
+repo_name: homelab-docs
+
 theme:
   name: material
   language: it
-  custom_dir: '../../overrides/'
+  custom_dir: '../../assets/'
   palette: 
     - scheme: default
       toggle:
         icon: material/brightness-7 
-        name: Switch to dark mode
+        name: Cambia in modalità scura
       primary: indigo
       accent: blue
     - scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Cambia in modalità chiara
       primary: orange
       accent: orange
 
@@ -33,8 +36,8 @@ theme:
     - navigation.footer
 
 extra_css:
-  - assets/stylesheets/extra.css
-  - assets/stylesheets/light-extra.css
+  - stylesheets/extra.css
+  - stylesheets/light-extra.css
   
 markdown_extensions:
   - admonition

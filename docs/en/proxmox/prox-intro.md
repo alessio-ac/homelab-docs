@@ -1,6 +1,6 @@
-# VM Server
+# Hypervisor Server
 
-## Specifiche sistema
+## System info
 
 - **OS:** Proxmox
 - **IP:** 192.168.1.60
@@ -11,15 +11,15 @@
     - **/dev/nvme0n1**: WD Blue SN570 500GB SSD
     - **/dev/sda**: Samsung Enterprise 240GB SSD
 
-## Macchine virtuali
+## Virtual Machines
 
-Proxmox è una piattaforma di virtualizzazione basata su Debian, utilizza l'hypervisor di Tipo 1 KVM. Utilizzo questa macchina per virtualizzare vari servizi utili per il lavoro, l'intrattenimento e, principalmente, per hobby.
+Proxmox is a virtualization platform based on Debian, using the Type 1 hypervisor KVM. I use this machine to virtualize various services useful for work, entertainment, and primarily for hobbies.
 
-Le seguenti sono tutte le macchine virtuali installate:
+The following are all the installed virtual machines:
 
 ### **debian-docker**
 
-VM che funge da base per tutti i servizi Docker, gestiti tramite Portainer.
+VM that serves as the base for all Docker services, managed via Portainer.
 
 - **ID**: 200
 - **OS**: Debian 12
@@ -29,7 +29,7 @@ VM che funge da base per tutti i servizi Docker, gestiti tramite Portainer.
 
 ### **media-server**
 
-Per tutti i servizi basati sui contenuti multimediali, è collegata allo share `media`. Vi è installato Jellyfin e vari script per lo scaricamento di media.
+For all media-based services, connected to the `media` share. It has Jellyfin installed along with various scripts for media downloading.
 
 - **ID**: 201
 - **OS**: Debian 12
@@ -39,20 +39,20 @@ Per tutti i servizi basati sui contenuti multimediali, è collegata allo share `
 
 ### **debian-remote**
 
-Macchina utilizzata solamente per il remote desktop.
+Machine used solely for remote desktop.
 
 - **ID**: 202
 - **OS**: Debian 12
-- **IP**: 192.168.1.XXX
+- **IP**: 192.168.1.235
 - **vCPU**: 4
 - **RAM:**: 4GB
 
 ## Containers
 
-Utilizzo il server anche per vari LXC. Dei container molto più leggeri rispetto alle VM che mi permettono di avere vari servizi isolati ad un costo di performance molto inferiore.
+I also use the server for various LXC containers. These are much lighter than VMs and allow me to run various isolated services at a much lower performance cost.
 
-- **100 (cloudflare-tunnel)**: Utilizzato per collegarsi al network di casa anche da remoto
-- **103 (nextcloud)**: Cloud personale
-- **105 (syncthing)**: Sincronizzazione di file tra i dispositivi
-- **106 (bookstack)**: Knowledge-base che ho utilizzato principalmente per la maturità
-- **109 (wordpress)**: Blog privato
+- **100 (cloudflare-tunnel)**: Used to connect to the home network remotely.
+- **103 (nextcloud)**: Personal cloud
+- **105 (syncthing)**: File synchronization between devices
+- **106 (bookstack)**: Knowledge base that I used primarily for my high school diploma
+- **109 (wordpress)**: Private blog

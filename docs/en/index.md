@@ -1,27 +1,26 @@
-# Documentazione homelab
+# Homelab documentation
 
-ENENEN
-Questa documentazione fornisce una panoramica completa del mio homelab, spiegando la configurazione e l'utilizzo di tutte le macchine presenti.
+This documentation provides a comprehensive overview of my homelab, explaining the configuration and usage of all the machines present.
 
-È stata creata come punto di riferimento per me o per chi volesse replicare la stessa configurazione sulle proprie macchine.
+It was created as a reference point for me or for anyone who wants to replicate the same configuration on their own machines.
 
-## Contatti
+## Contact me
 
-Se necessario è possibile contattarmi qui:
+If necessary you can find me here:
 
 - [Mail](mailto:alessio.cucinotta@ale.ac)
 - [Linkedin](https://www.linkedin.com/in/alessio-cucinotta-cms)
 
-## Link veloci
+## Shortcuts
 
 #### [TrueNAS Scale](truenas/nas-intro.md)
 
-Per la pagina dedicata al mio file server.
+For the page dedicated to my file server.
 
 #### [Proxmox](proxmox/prox-intro.md)
 
-Per la pagina dedicata al mio server hypervisor.
+For the page dedicated to my hypervisor server.
 
 #### [Servizi](services/nextcloud.md)
 
-Pagina dedicata alla spiegazione dei vari servizi che ho configurato sul mio homleab.
+For the explenation of the various services provided by my homelab.
