@@ -1,0 +1,87 @@
+site_name: Homelab Documentation
+docs_dir: '../../docs/en'
+site_dir: '../../generated/en'
+site_url: https://homelab.ale.ac
+
+repo_url: https://github.com/alessio-ac/homelab-docs
+repo_name: homelab-docs
+
+theme:
+  name: material
+  language: en
+  custom_dir: '../../assets/'
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: indigo
+      accent: blue
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: orange
+      accent: orange
+
+  features:
+    - navigation.instant
+    - navigation.indexes 
+    - navigation.expand
+    - navigation.sections
+    - content.code.annotation
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/light-extra.css
+  
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+plugins:
+  - glightbox
+  - social
+  
+nav:
+    - Home: index.md
+    - Installation and configuration:
+      - TrueNAS Scale:
+          - Introduction: truenas/nas-intro.md
+          - Installation: truenas/nas-install.md
+          - Configuration: truenas/nas-conf.md
+      - Proxmox:
+          - Introduction: proxmox/prox-intro.md
+          - Installation: proxmox/prox-install.md
+          - Virtual Machines: proxmox/vm.md
+    - Services:
+      - Nextcloud: services/nextcloud.md
+      - BookStack: services/bookstack.md
+      - Jellyfin: services/jellyfin.md
+      - Homebox: services/homebox.md
+
+extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Italian
+      link: /it/
+      lang: it
+  social:
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/in/alessio-cucinotta-cms
+
+copyright: |
+  &copy; 2024 <a href="mailto:alessio.cucinotta@ale.ac"  target="_blank" rel="noopener">Alessio Cucinotta</a>
