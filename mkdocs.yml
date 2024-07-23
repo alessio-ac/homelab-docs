@@ -1,5 +1,6 @@
 site_name: Documentazione Homelab
 site_url: https://homelab.ale.ac
+site_dir: 'generated/'
 
 theme:
   name: material
