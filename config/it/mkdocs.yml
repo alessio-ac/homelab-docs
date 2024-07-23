@@ -2,6 +2,7 @@ site_name: Documentazione Homelab
 docs_dir: '../../docs/it'
 site_dir: '../../generated/it'
 site_url: https://homelab.ale.ac
+site_dir: 'generated/'
 
 repo_url: https://github.com/alessio-ac/homelab-docs
 repo_name: homelab-docs
